@@ -32,7 +32,7 @@ Random.prototype = {
 	_add: function() {
 		$('.content').css({display: 'none'});
 		$('.editDishes').css({display: 'block'});
-		$('#dishesInput').value(this.dishesList);
+		$('#dishesInput')[0].value(this.dishesList);
 	}
 }
 
