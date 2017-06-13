@@ -44,3 +44,36 @@ button:focus {
 	margin-top: 10px;
 	color: gray;
 }
+
+#dishesInput {
+	border: 1px solid #ddd;
+}
+
+.editDishes {
+	display: none;
+}
+
+#save {
+	margin: 0 auto;
+	width: 35%;
+	height: 30px;
+	margin-top: 10px;
+	font-size: 1em;
+	background: #de5656;
+	border: 1px solid #de5656;
+	border-radius: 5px;
+	margin-left: 5%;
+	color: #fff;
+}
+
+#cancel {
+	margin: 0 auto;
+	width: 35%;
+	height: 30px;
+	margin-top: 10px;
+	font-size: 1em;
+	background: gray;
+	border: 1px solid gray;
+	border-radius: 5px;
+	color: #fff;
+}
