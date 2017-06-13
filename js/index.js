@@ -5,7 +5,7 @@ function Random() {
 Random.prototype = {
 	_init: function() {
 		$.get({
-			url: './disher.json',
+			url: './dishes.json',
 			success: function(res) {
 				console.log(res)
 			}
