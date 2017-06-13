@@ -14,7 +14,10 @@ Random.prototype = {
 		});
 		$('#createBtn').click(function() {
 			that._create();
-		})
+		});
+		$('#addBtn').click(function() {
+			that._create();
+		});
 	},
 
 	_create: function() {

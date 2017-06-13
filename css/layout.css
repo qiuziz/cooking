@@ -38,7 +38,7 @@ button:focus {
 	outline: none;
 }
 
-.addBtn {
+#addBtn {
 	background: #fff;
 	border: none;
 	margin-top: 10px;
