@@ -16,7 +16,7 @@ Random.prototype = {
 			that._create();
 		});
 		$('#addBtn').click(function() {
-			that._create();
+			that._add();
 		});
 	},
 
