@@ -30,8 +30,8 @@ Random.prototype = {
 	},
 
 	_add: function() {
-		$('.content')[0].css({display: none});
-		$('.editDishes')[0].css({display: block});
+		$('.content')[0].css({display: 'none'});
+		$('.editDishes')[0].css({display: 'block'});
 		$('#dishesInput').value(this.dishesList);
 	}
 }
