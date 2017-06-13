@@ -1,0 +1,12 @@
+{
+  "name": "cooking",
+  "description": "",
+  "version": "0.0.1",
+  "private": true,
+  "author": "qiuz",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {}
+}
