@@ -46,7 +46,7 @@ Random.prototype = {
 		var dishes = $('#dishesInput')[0].value.replace(/\n/g, ',');
 		this.dishesList = dishes.split(',');
 		$.post({
-			url: './dishes.json/name',
+			url: './dishes.json',
 			data: this.dishesList,
 			success: function(res) {
 				console.log('success');
