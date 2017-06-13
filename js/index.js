@@ -23,7 +23,13 @@ Random.prototype = {
 			b = noRepeat(a, Math.floor(Math.random() * len)),
 			dish1 = this.dishesList[a],
 			dish2 = this.dishesList[b];
-		$('#createDishes').text('今晚菜谱：' + dish1 + ',' + dish2);
+		$('#createDishes').text('今晚菜谱：' + dish1 + ' + ' + dish2);
+	},
+
+	_add: function() {
+		$('.content')[0].css({display: none});
+		$('.editDishes')[0].css({display: block});
+		$('#dishesInput').value(this.dishesList);
 	}
 }
 
