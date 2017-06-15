@@ -7,9 +7,9 @@ Random.prototype = {
 	_init: function() {
 		var that = this;
 		$.get({
-			url: './dishes.json',
+			url: '/dishes',
 			success: function(res) {
-				that.dishesList = res.name;
+				that.dishesList = res.dishes;
 			}
 		});
 		$('#createBtn').click(function() {
@@ -42,9 +42,16 @@ Random.prototype = {
 	},
 
 	_save: function() {
+		var that = this;
 		var dishes = $('#dishesInput')[0].value.replace(/\n/g, ',');
 		this.dishesList = dishes.split(',');
-		this._cancel();
+		$.ajax({
+			type: 'POST',
+			url: '/dishes',
+			data: { dishes: that.dishesList },
+			success: that._cancel()
+		})
+		
 	},
 
 	_cancel: function () {
