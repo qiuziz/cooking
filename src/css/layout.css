@@ -77,3 +77,26 @@ button:focus {
 	border-radius: 5px;
 	color: #fff;
 }
+
+.authBox {
+	margin: 20px 0;
+}
+
+.authLabel {
+	font-size: 1em;
+}
+
+#auth {
+	border: 1px solid #ddd;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 5px;
+}
+
+#errorTips {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: red;
+	font-size: 12px;
+}

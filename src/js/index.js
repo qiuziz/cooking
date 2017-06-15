@@ -10,19 +10,19 @@ Random.prototype = {
 			url: '/dishes',
 			success: function(res) {
 				that.dishesList = res.dishes;
+				$('#createBtn').click(function() {
+					that._create();
+				});
+				$('#addBtn').click(function() {
+					that._add();
+				});
+				$('#save').click(function() {
+					that._save();
+				});
+				$('#cancel').click(function() {
+					that._cancel();
+				});
 			}
-		});
-		$('#createBtn').click(function() {
-			that._create();
-		});
-		$('#addBtn').click(function() {
-			that._add();
-		});
-		$('#save').click(function() {
-			that._save();
-		});
-		$('#cancel').click(function() {
-			that._cancel();
 		});
 	},
 
@@ -45,16 +45,24 @@ Random.prototype = {
 		var that = this;
 		var dishes = $('#dishesInput')[0].value.replace(/\n/g, ',');
 		this.dishesList = dishes.split(',');
+		var auth = $('#auth').val();
 		$.ajax({
 			type: 'POST',
 			url: '/dishes',
-			data: { dishes: that.dishesList },
-			success: that._cancel()
+			data: { dishes: that.dishesList, auth: auth },
+			success: function(res) {
+				that._cancel();
+			},
+			error: function(xhr,errorText,errorType) {
+				var err = JSON.parse(xhr.responseText);
+				$('#errorTips').text(err.msg);
+			}
 		})
 		
 	},
 
 	_cancel: function () {
+		$('#errorTips').text('');
 		$('.content').css({display: 'block'});
 		$('.editDishes').css({display: 'none'});
 	}
