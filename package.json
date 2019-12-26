@@ -1,7 +1,7 @@
 {
   "name": "cooking",
-  "version": "0.1.0",
-  "private": true,
+	"version": "0.1.0",
+	"homepage": "https://qiuziz.github.io/cooking",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@qiuz/react-image-map": "^0.1.23",
