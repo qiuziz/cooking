@@ -1,5 +1,5 @@
 {
-  "name": "syrinx-h5",
+  "name": "cooking",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -78,7 +78,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh scripts/deploy.sh",
   },
   "eslintConfig": {
     "extends": "react-app"
