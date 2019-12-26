@@ -2,6 +2,8 @@
   "name": "cooking",
 	"version": "0.1.0",
 	"homepage": "https://qiuziz.github.io/cooking",
+	"description": "随机生成今日菜谱",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@qiuz/react-image-map": "^0.1.23",

@@ -3,17 +3,16 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-11-07 16:03:31
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-12-26 19:27:27
+ * @Last Modified time: 2019-12-26 19:43:29
  */
 
-import * as React from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { HashHistory } from './common';
 
 import { LayoutView as Layout } from './component';
 
 import {
-	Home, Category, GoodsDetail,
+	Home
 } from './container';
 
 export const routes = [
@@ -25,25 +24,9 @@ export const routes = [
 		title: '首页',
 		noNav: true
   },
-  {
-    path: '/category',
-    Component: Category,
-    exact: true,
-		Layout: Layout,
-		title: '分类',
-		noNav: true
-  },
-  {
-    path: '/goods-detail',
-    Component: GoodsDetail,
-    exact: true,
-		Layout: Layout,
-		title: '商品详情页',
-		noNav: true
-  },
 ];
 
-const prefix = process.env.NODE_ENV === 'production' ? '/react-image-map' : '';
+const prefix = process.env.NODE_ENV === 'production' ? '/cooking' : '';
 
 const App = () => {
   return (
