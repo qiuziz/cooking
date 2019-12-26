@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cooking/static/css/main.af2e5e35.chunk.css",
+    "main.js": "/cooking/static/js/main.5bb1e741.chunk.js",
+    "runtime~main.js": "/cooking/static/js/runtime~main.43a0683b.js",
+    "static/js/2.f34c21fb.chunk.js": "/cooking/static/js/2.f34c21fb.chunk.js",
+    "index.html": "/cooking/index.html",
+    "precache-manifest.c073e212635824b59707592b5542f781.js": "/cooking/precache-manifest.c073e212635824b59707592b5542f781.js",
+    "service-worker.js": "/cooking/service-worker.js",
+    "static/media/main-cn-s.png": "/cooking/static/media/main-cn-s.a6c1f7db.png",
+    "static/media/main-cn.png": "/cooking/static/media/main-cn.dacdc7c2.png",
+    "static/media/main-s.png": "/cooking/static/media/main-s.8dcb50cd.png",
+    "static/media/main.png": "/cooking/static/media/main.912fc448.png"
+  }
+}
