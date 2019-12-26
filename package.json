@@ -78,7 +78,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
-    "deploy": "sh scripts/deploy.sh",
+    "deploy": "sh scripts/deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
