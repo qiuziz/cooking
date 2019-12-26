@@ -3,7 +3,7 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-11-07 16:03:31
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-12-26 17:41:44
+ * @Last Modified time: 2019-12-26 19:27:27
  */
 
 import * as React from 'react';
@@ -43,35 +43,26 @@ export const routes = [
   },
 ];
 
+const prefix = process.env.NODE_ENV === 'production' ? '/react-image-map' : '';
+
 const App = () => {
   return (
     <Switch>
       {
-        routes.map(({ path, noNav, Layout, Component, exact, title, noPadding, navStyle, white }: any, index) => {
+        routes.map(({ path, Component, exact }: any, index) => {
 					return (
 						<Route
 							key={index}
-							path={path}
+							path={`${prefix}${path}`}
 							exact={exact}
 							render={
-	              props => {
-									const { history, location } = props;
-	                const History = HashHistory(history, location);
-	                title && (document.title = title);
-	                return Layout
-		                  ? <Layout {...props} History={History} noNav={noNav} navStyle={navStyle} noPadding={noPadding} white={white}>
-		                    <Component {...props} History={History} />
-		                  </Layout>
-		                  : <div>
-													<Component {...props} History={History} />
-												</div>
-	              }
+								props => <Component {...props} History={History} />
 							}
             />
           )
         })
       }
-      <Redirect to="/" />
+      <Redirect to={prefix} />
     </Switch>
   )
 }
