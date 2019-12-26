@@ -3,7 +3,7 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-11-07 16:03:31
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-11-26 17:43:21
+ * @Last Modified time: 2019-12-26 17:41:44
  */
 
 import * as React from 'react';
@@ -18,7 +18,7 @@ import {
 
 export const routes = [
   {
-    path: '/home',
+    path: '/',
     Component: Home,
     exact: true,
 		Layout: Layout,
@@ -71,7 +71,7 @@ const App = () => {
           )
         })
       }
-      <Redirect to="/home" />
+      <Redirect to="/" />
     </Switch>
   )
 }
